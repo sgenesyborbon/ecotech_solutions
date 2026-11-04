@@ -1,0 +1,301 @@
+[
+    {
+        "categoria": "Monitoreo Industrial",
+        "tipo_producto": "Sensor de Eficiencia Energética",
+        "tipo_sensor": "Termopares",
+        "codigo_producto": " Termopares-001 ",
+        "ubicacion": " Planta Norte ",
+        "dia_registro": "2026-10-01 08:30:00",
+        "temperatura": "24.5C"
+        },
+        
+    {
+        "categoria": "Monitoreo Industrial",
+        "tipo_producto": "Sensor de Eficiencia Energética",
+        "tipo_sensor": "Termistores",
+        "codigo_producto": "Termistores-042",
+        "ubicacion": "",
+        "dia_registro": "2026-10-02 09:15:00",
+        "temperatura": "-18.5 °C"
+        },
+        
+    {
+        "categoria": "Monitoreo Industrial",
+        "tipo_producto": "Sensor de Eficiencia Energética",
+        "tipo_sensor": "Termistores",
+        "codigo_producto": "Termistores-105",
+        "ubicacion": "Planta Este",
+        "dia_registro": "",
+        "temperatura": 45.0
+    },
+        
+    {
+        "categoria": "Monitoreo Industrial",
+        "tipo_producto": "Sensor de Eficiencia Energética",
+        "tipo_sensor": "Pirómetros",
+        "codigo_producto": "",
+        "ubicacion": "Planta Sur",
+        "dia_registro": "  2026-10-04  ",
+        "temperatura": "1200.5F"
+    },
+        
+    {
+        "categoria": "Monitoreo Industrial",
+        "tipo_producto": "Sensor de Eficiencia Energética",
+        "tipo_sensor": "Termoresistencias",
+        "codigo_producto": "-005",
+        "ubicacion": "Planta Oeste",
+        "dia_registro": "2026-10-05 10:00:00",
+        "temperatura": "150.2C"
+    },
+        
+    {
+        "categoria": "Monitoreo Industrial",
+        "tipo_producto": "Sensor de Eficiencia Energética",
+        "tipo_sensor": "",
+        "codigo_producto": "   -002   ",
+        "ubicacion": "   Otra   ",
+        "dia_registro": "",
+        "temperatura": "  -5.0  "
+    },
+        
+    {
+        "categoria": "Monitoreo Industrial",
+        "tipo_producto": "Sensor de Eficiencia Energética",
+        "tipo_sensor": "Termopares",
+        "codigo_producto": "",
+        "ubicacion": "",
+        "dia_registro": "2026-10-07",
+        "temperatura": "abc"
+    },
+        
+    {
+        "categoria": "Monitoreo Industrial",
+        "tipo_producto": "Sensor de Eficiencia Energética",
+        "tipo_sensor": "Termopares",
+        "codigo_producto": "Termopares-008",
+        "ubicacion": "Planta Norte",
+        "dia_registro": "2026-10-08",
+        "temperatura": "2000.0 C"
+    },
+
+    {
+        "categoria": "Monitoreo Industrial",
+        "tipo_producto": "Sensor de Eficiencia Energética",
+        "tipo_sensor": "Termoresistencias",
+        "codigo_producto": "Termoresistencias-009",
+        "ubicacion": "Planta Este",
+        "dia_registro": "2026-10-09",
+        "temperatura": "850.0 C"
+    },
+
+    {
+        "categoria": "Monitoreo Industrial",
+        "tipo_producto": "Sensor de Eficiencia Energética",
+        "tipo_sensor": "Termistores",
+        "codigo_producto": " Termistores-010 ",
+        "ubicacion": "",
+        "dia_registro": "2026-10-10",
+        "temperatura": "12.3"
+    },
+
+    {
+        "categoria": "Monitoreo Industrial",
+        "tipo_producto": "Sensor de Eficiencia Energética",
+        "tipo_sensor": "Pirómetros",
+        "codigo_producto": " Pirómetros-011 ",
+        "ubicacion": "Planta Sur",
+        "dia_registro": "",
+        "temperatura": "2500 °C"
+    },
+
+    {
+        "categoria": "Monitoreo Industrial",
+        "tipo_producto": "Sensor de Eficiencia Energética",
+        "tipo_sensor": "Termistores",
+        "codigo_producto": "Termistores-012",
+        "ubicacion": "Planta Oeste",
+        "dia_registro": "2026-10-12",
+        "temperatura": "-50C"
+    },
+
+    {
+        "categoria": "Monitoreo Industrial",
+        "tipo_producto": "Sensor de Eficiencia Energética",
+        "tipo_sensor": "Termistores",
+        "codigo_producto": "Termistores-013",
+        "ubicacion": "   Planta Norte   ",
+        "dia_registro": "2026-10-13",
+        "temperatura": "100.0"
+    },
+
+    {
+        "categoria": "Monitoreo Industrial",
+        "tipo_producto": "Sensor de Eficiencia Energética",
+        "tipo_sensor": "",
+        "codigo_producto": "",
+        "ubicacion": "Otra",
+        "dia_registro": "2026-10-14",
+        "temperatura": "invalid"
+    },
+
+    {
+        "categoria": "Monitoreo Industrial",
+        "tipo_producto": "Sensor de Eficiencia Energética",
+        "tipo_sensor": "",
+        "codigo_producto": "SENSOR-015",
+        "ubicacion": "Planta Este",
+        "dia_registro": "2026-10-15",
+        "temperatura": "450C"
+    },
+
+    {
+        "categoria": "Monitoreo Industrial",
+        "tipo_producto": "Sensor de Eficiencia Energética",
+        "tipo_sensor": "",
+        "codigo_producto": "RTD-016",
+        "ubicacion": "",
+        "dia_registro": "",
+        "temperatura": "12.5C"
+    },
+
+    {
+        "categoria": "Monitoreo Industrial",
+        "tipo_producto": "Sensor de Eficiencia Energética",
+        "tipo_sensor": "Termistores",
+        "codigo_producto": "Termistores-017",
+        "ubicacion": "Planta Sur",
+        "dia_registro": "2026-10-17",
+        "temperatura": "30.1"
+    },
+
+    {
+        "categoria": "Monitoreo Industrial",
+        "tipo_producto": "Sensor de Eficiencia Energética",
+        "tipo_sensor": "Pirómetros",
+        "codigo_producto": " Pirómetros-018 ",
+        "ubicacion": "Planta Oeste",
+        "dia_registro": "2026-10-18",
+        "temperatura": "1800F"
+    },
+
+    {
+        "categoria": "Monitoreo Industrial",
+        "tipo_producto": "Sensor de Eficiencia Energética",
+        "tipo_sensor": "Termistores",
+        "codigo_producto": "Termistores-019",
+        "ubicacion": "",
+        "dia_registro": "2026-10-19",
+        "temperatura": "95.2C"
+    },
+
+    {
+        "categoria": "Monitoreo Industrial",
+        "tipo_producto": "Sensor de Eficiencia Energética",
+        "tipo_sensor": "Termistores",
+        "codigo_producto": "Termistores-020",
+        "ubicacion": "   Otra   ",
+        "dia_registro": "2026-10-20",
+        "temperatura": "-50.0"
+    },
+
+    {
+        "categoria": "Monitoreo Industrial",
+        "tipo_producto": "Sensor de Eficiencia Energética",
+        "tipo_sensor": "Pirómetros",
+        "codigo_producto": "Pirómetros-021",
+        "ubicacion": "Planta Oeste",
+        "dia_registro": "2026-10-21",
+        "temperatura": "3000C"
+    },
+
+    {
+        "categoria": "Monitoreo Industrial",
+        "tipo_producto": "Sensor de Eficiencia Energética",
+        "tipo_sensor": "Pirómetros",
+        "codigo_producto": "Pirómetros-022",
+        "ubicacion": "Planta Este",
+        "dia_registro": "2026-10-22",
+        "temperatura": "1100C"
+    },
+
+    {
+        "categoria": "Monitoreo Industrial",
+        "tipo_producto": "Sensor de Eficiencia Energética",
+        "tipo_sensor": "Termopares",
+        "codigo_producto": "Termopares-023", 
+        "ubicacion": "Planta Sur", 
+        "dia_registro": "2026-10-23", 
+        "temperatura": "-200.0 °C"
+    },
+
+    {
+        "categoria": "Monitoreo Industrial",
+        "tipo_producto": "Sensor de Eficiencia Energética",
+        "tipo_sensor": "Termistores",
+        "codigo_producto": "  Termistores-024 ", 
+        "ubicacion": "", 
+        "dia_registro": "2026-10-24", 
+        "temperatura": "55.5"
+    },
+
+    {
+        "categoria": "Monitoreo Industrial",
+        "tipo_producto": "Sensor de Eficiencia Energética",
+        "tipo_sensor": "Pirómetros",
+        "codigo_producto": "Pirómetros-025",
+        "ubicacion": "Planta Oeste",
+        "dia_registro": "2026-10-25",
+        "temperatura": "3000C"
+    },
+
+    {
+        "categoria": "Monitoreo Industrial",
+        "tipo_producto": "Sensor de Eficiencia Energética",
+        "tipo_sensor": "Termoresistencias",
+        "codigo_producto": "Termoresistencias-026",
+        "ubicacion": "Planta Norte",
+        "dia_registro": "",
+        "temperatura": "75.0C"
+    },
+
+    {
+        "categoria": "Monitoreo Industrial",
+        "tipo_producto": "Sensor de Eficiencia Energética",
+        "tipo_sensor": "Termistores",
+        "codigo_producto": "Termistores-027",
+        "ubicacion": "Planta Este",
+        "dia_registro": "2026-10-27",
+        "temperatura": "15.0"
+    },
+
+    {
+        "categoria": "Monitoreo Industrial",
+        "tipo_producto": "Sensor de Eficiencia Energética",
+        "tipo_sensor": "Termistores",
+        "codigo_producto": "Termistores-028",
+        "ubicacion": "Otra",
+        "dia_registro": "2026-10-28",
+        "temperatura": "error_temp"
+    },
+
+    {
+        "categoria": "Monitoreo Industrial",
+        "tipo_producto": "Sensor de Eficiencia Energética",
+        "tipo_sensor": "Termoresistencias",
+        "codigo_producto": "",
+        "ubicacion": "Planta Sur",
+        "dia_registro": "2026-10-29",
+        "temperatura": "500C"
+    },
+
+    {
+        "categoria": "Monitoreo Industrial",
+        "tipo_producto": "Sensor de Eficiencia Energética",
+        "tipo_sensor": "Termistores",
+        "codigo_producto": "Termistores-030",
+        "ubicacion": "Planta Oeste",
+        "dia_registro": "2026-10-30",
+        "temperatura": "45.8 °C"
+    }
+]

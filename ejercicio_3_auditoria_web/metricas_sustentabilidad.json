@@ -1,0 +1,47 @@
+{
+    "consumo_global_kwh": 23348.6,
+    "total_emisiones": 9340.0,
+    "maquina_mayor_consumo": "Laminadora al Vacío de Alta Capacidad",
+    "registros": [
+        {
+            "tipo_maquinaria": "Máquina de Inspección y Clasificación de Obleas",
+            "codigo_maquinaria": "INSPECCION_CLASIFICACION-001",
+            "nombre_maquinaria": "Mesa de Inspección Óptica de Obleas",
+            "kwh_mensual": 1047.2,
+            "costo_mensual": 3665200.0,
+            "tarifa_kwh": 3500.0
+        },
+        {
+            "tipo_maquinaria": "Cortadora Láser de Células",
+            "codigo_maquinaria": "CORTADORA_LASER-001",
+            "nombre_maquinaria": "Cortadora Láser de Células Half-Cell",
+            "kwh_mensual": 3801.6,
+            "costo_mensual": 45619200.0,
+            "tarifa_kwh": 12000.0
+        },
+        {
+            "tipo_maquinaria": "Máquina de Encadenado de Células",
+            "codigo_maquinaria": "ENCADENADO-001",
+            "nombre_maquinaria": "Soldadora Automática de Células (Stringer)",
+            "kwh_mensual": 2692.8,
+            "costo_mensual": 22888800.0,
+            "tarifa_kwh": 8500.0
+        },
+        {
+            "tipo_maquinaria": "Máquina Laminadora al Vacío",
+            "codigo_maquinaria": "LAMINADORA-001",
+            "nombre_maquinaria": "Laminadora al Vacío de Alta Capacidad",
+            "kwh_mensual": 13167.0,
+            "costo_mensual": 460845000.0,
+            "tarifa_kwh": 35000.0
+        },
+        {
+            "tipo_maquinaria": "Simulador Solar Flash",
+            "codigo_maquinaria": "SIMULADOR_SOLAR-001",
+            "nombre_maquinaria": "Simulador Solar Flash (Prueba STC)",
+            "kwh_mensual": 2640.0,
+            "costo_mensual": 39600000.0,
+            "tarifa_kwh": 15000.0
+        }
+    ]
+}

@@ -1,0 +1,268 @@
+{% extends 'base.html' %}
+
+{% block title %}Panel Administrativo de Sustentabilidad - EcoTech Solutions{% endblock %}
+
+{% block content %}
+    <!-- Todo el contenido actual de tu panel va aquí adentro -->
+    <div class="container my-5">
+        <!-- Encabezado -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <h1 class="fw-bold text-success">
+                    <i class="bi bi-speedometer2"></i> {{ titulo }}
+                </h1>
+                <p class="text-muted">EcoTech Solutions - Monitoreo de Emisiones y Consumo Energético</p>
+            </div>
+        </div>
+
+        <!-- Barra de Herramientas Ejecutiva -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card border-0 shadow-sm bg-white">
+                    <div class="card-body py-3 d-flex flex-wrap justify-content-between align-items-center gap-3">
+                        <span class="text-muted fw-medium small">
+                            <i class="bi bi-sliders"></i> Panel de Control y Acciones Rápidas
+                        </span>
+                        <div class="d-flex flex-wrap gap-2">
+                            <!-- Botón Imprimir -->
+                            <button onclick="window.print()" class="btn btn-outline-secondary btn-sm px-3">
+                                <i class="bi bi-printer"></i> Imprimir
+                            </button>
+                    
+                            <!-- Botón Descargar PDF -->
+                            <form id="pdfForm" action="{% url 'exportar_pdf' %}" method="POST" class="d-inline">
+                                {% csrf_token %}
+                                <input type="hidden" name="grafico_imagen" id="graficoImagenInput">
+                                <button type="button" onclick="enviarPdfConGrafico()" class="btn btn-outline-danger btn-sm px-3">
+                                    <i class="bi bi-file-earmark-pdf"></i> Guardar PDF
+                                </button>
+                            </form>
+
+                            <!-- Botón Enviar por Correo -->
+                            <button type="button" class="btn btn-outline-success btn-sm px-3" data-bs-toggle="modal" data-bs-target="#modalCorreo">
+                                <i class="bi bi-envelope-paper"></i> Enviar por Correo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="mb-4">
+
+        <!-- Tarjetas Visuales (KPIs) -->
+        <div class="row g-4 mb-5 justify-content-center">
+            <!-- Tarjeta 1 -->
+            <div class="col-xl-3 col-lg-3 col-md-6 col-12">
+                <div class="card border-0 shadow-sm bg-white h-100">
+                    <div class="card-body text-center py-4 d-flex flex-column justify-content-center">
+                        <h6 class="text-uppercase text-muted fw-semibold mb-2">Consumo Global</h6>
+                        <h2 class="text-primary fw-bold mb-0">{{ consumo_global }} <span class="fs-5">kWh</span></h2>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2 -->
+            <div class="col-xl-3 col-lg-3 col-md-6 col-12">
+                <div class="card border-0 shadow-sm bg-white h-100">
+                    <div class="card-body text-center py-4 d-flex flex-column justify-content-center">
+                        <h6 class="text-uppercase text-muted fw-semibold mb-2">Emisiones de Carbono</h6>
+                        <h2 class="text-danger fw-bold mb-0">{{ total_emisiones }} <span class="fs-5">kg CO₂</span></h2>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 3: Costo Global Mensual -->
+            <div class="col-xl-3 col-lg-3 col-md-6 col-12">
+                <div class="card border-0 shadow-sm bg-white h-100">
+                    <div class="card-body text-center py-4 d-flex flex-column justify-content-center">
+                        <h6 class="text-uppercase text-muted fw-semibold mb-2">Costo Mensual Total</h6>
+                        <h2 class="text-success fw-bold mb-0"><span class="fs-5">$</span> {{ costo_global }}</h2>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 4 -->
+            <div class="col-xl-3 col-lg-3 col-md-6 col-12">
+                <div class="card border-0 shadow-sm bg-white h-100">
+                    <div class="card-body text-center py-4 d-flex flex-column justify-content-center">
+                        <h6 class="text-uppercase text-muted fw-semibold mb-2">Mayor Consumo / Máquina</h6>
+                        <h4 class="text-dark fw-bold mt-1 mb-0 text-break fs-5">
+                            {{ mayor_consumo|default:"N/A" }}
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección del Gráfico de Consumo por Maquinaria -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="card border-0 shadow-sm bg-white">
+                    <div class="card-header bg-white py-3 border-0">
+                        <h5 class="fw-bold text-success mb-0">
+                            <i class="bi bi-bar-chart-fill"></i> Consumo Energético por Maquinaria (kWh/mes)
+                        </h5>
+                    </div>
+                    <div class="card-body p-4">
+                        <div style="position: relative; height: 320px; width: 100%;">
+                            <canvas id="graficoConsumo"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabla detallada -->
+        <div class="card border-0 shadow-sm">
+            <div class="card-header bg-success text-white py-3">
+                <h5 class="mb-0 fw-semibold">
+                    <i class="bi bi-table"></i> Historial Detallado de Operación
+                </h5>
+            </div>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th class="ps-4">Planta / Maquinaria</th>
+                                <th>Consumo (kWh)</th>
+                                <th class="text-end pe-4">Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for reg in lista_registros %}
+                            <tr>
+                                <td class="ps-4 fw-medium text-dark">
+                                    {{ reg.planta|default:reg.nombre_maquinaria|default:"Equipo General" }}
+                                </td>
+                                <td>
+                                    <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2">
+                                        {{ reg.consumo_kwh|default:reg.kwh_mensual }} kWh
+                                    </span>
+                                </td>
+                                <td class="text-end pe-4">
+                                    <span class="text-success fw-semibold">
+                                        <i class="bi bi-check-circle-fill"></i> Registrado
+                                    </span>
+                                </td>
+                            </tr>
+                            {% empty %}
+                            <tr>
+                                <td colspan="3" class="text-center py-4 text-muted">
+                                    No hay registros disponibles en este momento.
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Enviar por Correo -->
+    <div class="modal fade" id="modalCorreo" tabindex="-1" aria-labelledby="modalCorreoLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form action="{% url 'enviar_correo_reporte' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="modal-header">
+                        <h5 class="modal-title fw-bold text-success" id="modalCorreoLabel">
+                            <i class="bi bi-envelope-paper"></i> Enviar Reporte por Correo
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="email_destino" class="form-label small fw-semibold">Correo Electrónico del Destinatario:</label>
+                            <input type="email" class="form-control" id="email_destino" name="email_destino" placeholder="ejemplo@ecotechsolutions.com" required>
+                        </div>
+                        <p class="text-muted small">Se adjuntará automáticamente el reporte en PDF con las métricas globales y de maquinaria actualizadas.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-success btn-sm px-4">
+                            <i class="bi bi-send"></i> Enviar Reporte
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block extra_js %}
+    <!-- Script de Chart.js -->
+    <script>
+        const nombresMaquinas = JSON.parse('{{ nombres_json|safe }}');
+        const consumosKwh = JSON.parse('{{ consumos_json|safe }}');
+        const costosMensuales = JSON.parse('{{ costos_json|safe }}');
+
+        const ctx = document.getElementById('graficoConsumo').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: nombresMaquinas,
+                datasets: [
+                    {
+                        label: 'Consumo (kWh)',
+                        data: consumosKwh,
+                        backgroundColor: 'rgba(25, 135, 84, 0.85)',
+                        borderColor: '#198754',
+                        borderWidth: 1,
+                        yAxisID: 'y',
+                        borderRadius: 4
+                    },
+                    {
+                        label: 'Costo Mensual ($)',
+                        data: costosMensuales,
+                        backgroundColor: 'rgba(13, 110, 253, 0.85)',
+                        borderColor: '#0d6efd',
+                        borderWidth: 1,
+                        yAxisID: 'y1',
+                        borderRadius: 4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top'
+                    }
+                },
+                scales: {
+                    x: {
+                        ticks: { display: false },
+                        grid: { display: false }
+                    },
+                    y: {
+                        type: 'linear',
+                        display: true,
+                        position: 'left',
+                        title: { display: true, text: 'Consumo (kWh)' }
+                    },
+                    y1: {
+                        type: 'linear',
+                        display: true,
+                        position: 'right',
+                        grid: { drawOnChartArea: false },
+                        title: { display: true, text: 'Costo Mensual ($)' }
+                    }
+                }
+            }
+        });
+
+        function enviarPdfConGrafico() {
+            const canvas = document.getElementById('graficoConsumo');
+            if (canvas) {
+                const imagenBase64 = canvas.toDataURL('image/png');
+                document.getElementById('graficoImagenInput').value = imagenBase64;
+            }
+            document.getElementById('pdfForm').submit();
+        }
+    </script>
+{% endblock %}

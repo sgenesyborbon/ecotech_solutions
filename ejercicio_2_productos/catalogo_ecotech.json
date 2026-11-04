@@ -1,0 +1,142 @@
+[
+    {
+        "Producto ID": "681eae1c-9603-4a22-a6cf-a6d1a44146fc",
+        "Categoría": "Energía Solar",
+        "Tipo de Producto": "Panel Solar",
+        "Código de Producto": "PANEL_SOLAR-001",
+        "Nombre": "Panel Solar Monocristalino PERC",
+        "Descripción": "Panel fotovoltaico de alta eficiencia con tecnología\n        Half-Cell para proyectos industriales.",
+        "Fecha de Producción": "2026-11-01",
+        "Fecha de Garantía": "2051-11-01",
+        "Degradación Anual Máxima": "0.55%",
+        "Precio de Venta": "$286.00",
+        "Potencia Máxima de Salida": "450W",
+        "Tolerancia Positiva": "0/+5W",
+        "Eficiencia Máxima": "20.7%",
+        "Características Generales": {
+            "Células": [
+                "Monocristalinas Half-Cell 144 células"
+            ],
+            "Resistencia": [
+                "Carga de nieve 5400 Pa",
+                "Carga de viento 2400 Pa"
+            ],
+            "Caja de Conexión": [
+                "IP68 con 3 diodos Bypass"
+            ]
+        },
+        "Dimensiones del Módulo": {
+            "Módulo Completo": [
+                "2094 mm",
+                "1038 mm"
+            ]
+        },
+        "Rendimiento Eléctrico": {
+            "1000 W/m2": [
+                41.5,
+                450.0
+            ],
+            "800 W/m2": [
+                41.2,
+                360.0
+            ],
+            "600 W/m2": [
+                40.8,
+                270.0
+            ]
+        },
+        "Datos Eléctricos": {
+            "Tensión Vmp": [
+                "V",
+                41.5
+            ],
+            "Corriente Imp": [
+                "A",
+                10.85
+            ],
+            "Tensión Voc": [
+                "V",
+                49.3
+            ]
+        },
+        "Datos Mecánicos": {
+            "Vidrio Frontal": "3.2 mm Templado",
+            "Marco": "Aluminio Anodizado",
+            "Peso": 23.5
+        },
+        "Datos Adicionales": {
+            "Temperatura Operativa": "-40°C a +85°C",
+            "Conector": "MC4 Compatible"
+        }
+    },
+    {
+        "Producto ID": "64e5677f-f2c0-4991-b8da-511ae1945b55",
+        "Categoría": "Energía Solar",
+        "Tipo de Producto": "Panel Solar",
+        "Código de Producto": "PANEL_SOLAR-003",
+        "Nombre": "Panel Solar Bifacial N-Type TopCon 550W",
+        "Descripción": "Panel solar fotovoltaico bifacial de alta potencia\n        con celdas de tecnología N-Type para máxima captación energética.",
+        "Fecha de Producción": "2026-08-15",
+        "Fecha de Garantía": "2051-08-15",
+        "Degradación Anual Máxima": "0.4%",
+        "Precio de Venta": "$344.50",
+        "Potencia Máxima de Salida": "550W",
+        "Tolerancia Positiva": "0/+10W",
+        "Eficiencia Máxima": "22.8%",
+        "Características Generales": {
+            "Células": [
+                "Monocristalinas N-Type Bifaciales 132 células"
+            ],
+            "Resistencia": [
+                "Carga de nieve 5400 Pa",
+                "Carga de viento 2400 Pa"
+            ],
+            "Tecnología": [
+                "Ganancia bifacial hasta 30% adicional por cara posterior"
+            ]
+        },
+        "Dimensiones del Módulo": {
+            "Módulo Completo": [
+                "2278 mm",
+                "1134 mm"
+            ]
+        },
+        "Rendimiento Eléctrico": {
+            "1000 W/m2": [
+                42.1,
+                550.0
+            ],
+            "800 W/m2": [
+                41.5,
+                440.0
+            ],
+            "600 W/m2": [
+                40.9,
+                330.0
+            ]
+        },
+        "Datos Eléctricos": {
+            "Tensión Vmp": [
+                "V",
+                42.1
+            ],
+            "Corriente Imp": [
+                "A",
+                13.07
+            ],
+            "Tensión Voc": [
+                "V",
+                50.3
+            ]
+        },
+        "Datos Mecánicos": {
+            "Vidrio Frontal/Posterior": "2.0mm Templado Doblado",
+            "Marco": "Aluminio Anodizado Negro",
+            "Peso": 28.5
+        },
+        "Datos Adicionales": {
+            "Temperatura Operativa": "-40°C a +85°C",
+            "Conector": "MC4 EVO2 Compatible"
+        }
+    }
+]

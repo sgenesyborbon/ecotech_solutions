@@ -1,0 +1,142 @@
+[
+    {
+        "categoria": "Otro",
+        "tipo_producto": "Otro",
+        "codigo_producto": "Otro-001",
+        "nombre": "Panel Solar Monocristalino PERC",
+        "descripcion": "Panel fotovoltaico de alta eficiencia con tecnología\n        Half-Cell para proyectos industriales.",
+        "stock": 90,
+        "fecha_produccion": "2026-11-04 05:04:38.693681",
+        "fecha_garantia": "2026-11-04 05:04:38.693681",
+        "degradacion_anual_max": 0.0,
+        "precio_venta": 0.0,
+        "potencia_max_salida": "450W",
+        "tolerancia_positiva": "0/+5W",
+        "eficiencia_max": 20.7,
+        "caracteristicas_generales": {
+            "Células": [
+                "Monocristalinas Half-Cell 144 células"
+            ],
+            "Resistencia": [
+                "Carga de nieve 5400 Pa",
+                "Carga de viento 2400 Pa"
+            ],
+            "Caja de Conexión": [
+                "IP68 con 3 diodos Bypass"
+            ]
+        },
+        "dimensiones_modulo": {
+            "Módulo Completo": [
+                "2094 mm",
+                "1038 mm"
+            ]
+        },
+        "rendimiento_electrico": {
+            "1000 W/m2": [
+                41.5,
+                450.0
+            ],
+            "800 W/m2": [
+                41.2,
+                360.0
+            ],
+            "600 W/m2": [
+                40.8,
+                270.0
+            ]
+        },
+        "datos_electricos": {
+            "Tensión Vmp": [
+                "V",
+                41.5
+            ],
+            "Corriente Imp": [
+                "A",
+                10.85
+            ],
+            "Tensión Voc": [
+                "V",
+                49.3
+            ]
+        },
+        "datos_mecanicos": {
+            "Vidrio Frontal": "3.2 mm Templado",
+            "Marco": "Aluminio Anodizado",
+            "Peso": 23.5
+        },
+        "datos_adicionales": {
+            "Temperatura Operativa": "-40°C a +85°C",
+            "Conector": "MC4 Compatible"
+        }
+    },
+    {
+        "categoria": "Otro",
+        "tipo_producto": "Otro",
+        "codigo_producto": "Otro-001",
+        "nombre": "Panel Solar Bifacial N-Type TopCon 550W",
+        "descripcion": "Panel solar fotovoltaico bifacial de alta potencia\n        con celdas de tecnología N-Type para máxima captación energética.",
+        "stock": 75,
+        "fecha_produccion": "2026-11-04 05:04:38.693681",
+        "fecha_garantia": "2026-11-04 05:04:38.693681",
+        "degradacion_anual_max": 0.0,
+        "precio_venta": 0.0,
+        "potencia_max_salida": "550W",
+        "tolerancia_positiva": "0/+10W",
+        "eficiencia_max": 22.8,
+        "caracteristicas_generales": {
+            "Células": [
+                "Monocristalinas N-Type Bifaciales 132 células"
+            ],
+            "Resistencia": [
+                "Carga de nieve 5400 Pa",
+                "Carga de viento 2400 Pa"
+            ],
+            "Tecnología": [
+                "Ganancia bifacial hasta 30% adicional por cara posterior"
+            ]
+        },
+        "dimensiones_modulo": {
+            "Módulo Completo": [
+                "2278 mm",
+                "1134 mm"
+            ]
+        },
+        "rendimiento_electrico": {
+            "1000 W/m2": [
+                42.1,
+                550.0
+            ],
+            "800 W/m2": [
+                41.5,
+                440.0
+            ],
+            "600 W/m2": [
+                40.9,
+                330.0
+            ]
+        },
+        "datos_electricos": {
+            "Tensión Vmp": [
+                "V",
+                42.1
+            ],
+            "Corriente Imp": [
+                "A",
+                13.07
+            ],
+            "Tensión Voc": [
+                "V",
+                50.3
+            ]
+        },
+        "datos_mecanicos": {
+            "Vidrio Frontal/Posterior": "2.0mm Templado Doblado",
+            "Marco": "Aluminio Anodizado Negro",
+            "Peso": 28.5
+        },
+        "datos_adicionales": {
+            "Temperatura Operativa": "-40°C a +85°C",
+            "Conector": "MC4 EVO2 Compatible"
+        }
+    }
+]
