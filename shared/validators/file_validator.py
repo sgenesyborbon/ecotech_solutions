@@ -20,7 +20,7 @@ C = TypeVar("C")  # Class / Instance Type
 
 
 class FileValidator:
-    """Files and data loader validation for domain models and inputs."""
+    """Validación de archivos y cargga de los mismos en instanciaciones e inputs"""
 
     # -------------------
     # VALIDAR ARCHIVO
@@ -31,7 +31,7 @@ class FileValidator:
         path: Path | str,
         field_name: str = "file_path",
     ) -> Path:
-        """Valida la ruta del archivo existe y que es un archivo."""
+        """Valida si la ruta del archivo existe y el tipo de data (archivo)"""
 
         file_path = Path(path) if isinstance(path, str) else path
 
