@@ -2,7 +2,7 @@
 
 Sistema backend modular en Python y Django diseñado para la monitorización de sensores IoT industriales, gestión de inventario y stock de dispositivos ecológicos, y auditoría energética de emisiones de huella de carbono.
 
-> **Proyecto Final Integrador** - Programación Full Stack (Python, Django, SQL, JSON)  
+> **Proyecto Final Integrador** - Programación Full Stack (Python, Django, SQL, JSON, HTML, Javascript)  
 > **Integrantes:** Sofía Genesy
 > **Profesor:** Diego Simonelli
 > **Fecha de Entrega:** 2026
@@ -25,38 +25,72 @@ El proyecto unifica tres componentes clave para la eficiencia industrial e impac
 
 ## 📁 Estructura del Repositorio
 
-ecotech_solutions/
-├── main.py                            # Script principal de ejecución e integración
-├── ejercicio_1_sensores/              # Módulo de procesamiento de sensores
-│   ├── sensores.py
-│   └── reporte_sensores.py
-├── ejercicio_2_productos/             # Módulo de inventario y dispositivos ecológicos
-│   ├── dispositivos_ecologicos.py
-|   |__ formula_precio.py              # Cálculo de costos y precio de venta
-│   ├── paneles_solares.py
-│   |── inventario.py
-|   |__ reporte_inventario.py
-|   |__ catalogo_ecotech.json          # Datos serializados del inventario
-|   |__ ficha_tecnica_panel_solar.pdf  # Catálogo de ficha técnica en pdf sin stock
-|   |__ registros_ecotech.json         # Registro de datos limpios con stock
-├── ejercicio_3_auditoria_web/         # Módulo de calculadora industrial y huella CO2
-│   ├── calculadora_consumo.py
-│   └── auditoria_emisiones.py
-|__ panel_sustentabilidad               # App de Django para interactuar con métricas
-|__ script/
-|   |__ script.py                       # Instanciación de clases y métodos para prueba
-├── shared/ 
-|   |__enums/
-|   |  |__ enums.py                     # Enums para identificar descriptores                            
-│   └── exceptions/
-│   |  └── exception.py                 # Excepciones personalizadas y validadores
-|   |__ validators/
-|       |__ data_validator.py           # Validaciones para tipo de atributos
-|       |__ datetime_validator.py       # Validaciones para atributos datetime
-|       |__ file_validator.py           # Validaciones para tipo de atributos extraidos
-├── tests/
-|   |__ test_auditoria.py               # Pruebas unitarias automatizadas (pytest)
-└── requirements.txt                    # Dependencias del proyecto
+### Script principal de ejecución e integración
+
+ecotech_solutions/ 
+- main.py  
+
+### Módulo de procesamiento de sensores
+
+ejercicio_1_sensores/  
+- sensores.py
+- reporte_sensores.py
+
+### Módulo de inventario y dispositivos ecológicos
+
+ejercicio_2_productos/             
+- dispositivos_ecologicos.py
+- formula_precio.py # Cálculo de costos y precio de venta
+- paneles_solares.py
+- inventario.py
+- reporte_inventario.py
+- catalogo_ecotech.json  # Datos serializados del inventario
+- ficha_tecnica_panel_solar.pdf  # Catálogo de ficha técnica en pdf sin stock
+- registros_ecotech.json  # Registro de datos limpios con stock
+
+### Módulo de calculadora industrial y huella CO2
+
+ejercicio_3_auditoria_web/         
+- calculadora_consumo.py
+- auditoria_emisiones.py
+- consumo_maquinaria_planta.json
+- metricas_sustentabilidad.json
+- reporte_sustentabilidad_ecotech.pdf
+
+### App de Django para interactuar con métricas
+
+panel_sustentabilidad/
+
+### Instanciación de clases y métodos para prueba
+
+script/
+- script.py 
+
+### Clases y métodos compartidos por todos los módulos
+
+shared/ 
+
+- enums/
+    - enums.py                      
+
+- exceptions/
+    - exception.py # Excepciones personalizadas
+
+- validators/
+    - data_validator.py # Validaciones para tipo de atributos
+    - datetime_validator.py # Validaciones para atributos datetime
+    - file_validator.py # Validaciones para tipo de atributos extraidos
+
+### Pruebas unitarias automatizadas - Pytest -
+
+tests/
+- test_auditoria.py
+
+### Dependencias del proyecto
+
+requirements.txt
+
+-------------------------------------------
 
 ## Badges
 
